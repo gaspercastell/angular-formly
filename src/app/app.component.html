@@ -1,4 +1,9 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+<form [formGroup]="formJuicio" (ngSubmit)="onSubmit()">
+  <formly-form
+    [model]="modelJuicio"
+    [fields]="fieldsJuicio"
+    [options]="optionsJuicio"
+    [form]="formJuicio"
+  ></formly-form>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

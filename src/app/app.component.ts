@@ -7,15 +7,15 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  form = new FormGroup({});
-  model = { email: 'email@gmail.com' };
-  options: FormlyFormOptions = {};
-  fields: FormlyFieldConfig[] = [
+  formJuicio = new FormGroup({});
+  modelJuicio = { email: 'email@gmail.com' };
+  optionsJuicio: FormlyFormOptions = {};
+  fieldsJuicio: FormlyFieldConfig[] = [
     {
       key: 'email',
       type: 'input',
       templateOptions: {
-        label: 'Email address',
+        label: 'Email addressk',
         placeholder: 'Enter email',
         required: true,
       },
@@ -23,6 +23,6 @@ export class AppComponent {
   ];
 
   onSubmit() {
-    alert(JSON.stringify(this.model, null, 4));
+    alert(JSON.stringify(this.modelJuicio, null, 4));
   }
 }

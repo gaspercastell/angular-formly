@@ -5,6 +5,8 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 import { AppComponent } from './app.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -16,7 +18,10 @@ import { AppComponent } from './app.component';
         { name: 'required', message: 'El campo es requerido' },
       ],
     }),
+    MatExpansionModule,
+    BrowserAnimationsModule,
   ],
+  exports: [MatExpansionModule],
   bootstrap: [AppComponent],
   declarations: [AppComponent],
 })

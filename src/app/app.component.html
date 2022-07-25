@@ -1,4 +1,4 @@
-<form [formGroup]="formJuicio" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="formJuicio" (ngSubmit)="onSubmit()">
   <formly-form
     [model]="modelJuicio"
     [fields]="fieldsJuicio"
@@ -6,4 +6,57 @@
     [form]="formJuicio"
   ></formly-form>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
+
+<div class="container">
+  <div class="col-sm-12">
+    <br />
+    <!-- #docregion multi -->
+    <mat-accordion class="example-headers-align" multi>
+      <!-- #enddocregion multi -->
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Demanda </mat-panel-title>
+          <mat-panel-description>
+            <small></small>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="mat-expansion-body-container">
+          <form [formGroup]="formDemanda">
+            <formly-form
+              [model]="modelDemanda"
+              [fields]="fieldsDemanda"
+              [form]="formDemanda"
+              [options]="optionsDemanda"
+            ></formly-form>
+            <button type="submit" hidden id="save-form"></button>
+          </form>
+        </div> </mat-expansion-panel
+      ><br />
+
+      <!-- <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Actor principal </mat-panel-title>
+          <mat-panel-description>
+            <small></small>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="mat-expansion-body-container">
+          <form [formGroup]="formJuicio">
+            <formly-form
+              [model]="modelJuicio"
+              [fields]="fieldsJuicio"
+              [form]="formJuicio"
+              [options]="optionsJuicio"
+            ></formly-form>
+            <button type="submit" hidden id="save-form"></button>
+          </form>
+        </div> </mat-expansion-panel
+      ><br /> -->
+    </mat-accordion>
+  </div>
+
+  <hr />
+
+  <br />
+</div>
